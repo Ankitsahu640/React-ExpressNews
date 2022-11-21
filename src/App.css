@@ -1,0 +1,102 @@
+.App {
+  text-align: center;
+}
+
+body{
+  padding: 0;
+  margin: 0;
+}
+
+/* sidebar.js css */
+.sidebar{
+  margin:0;
+  padding:0;
+  /* background-color: rgb(248, 225, 230);
+  width:15rem; */
+}
+.sidebar h3{
+  display:flex;
+  justify-content: space-around;
+  margin-top:4.5rem;
+  font-weight: 600;
+}
+.sidebar h3 img{
+  margin-top: 0.5rem;
+  cursor: pointer;
+  height: 1.5rem;
+} 
+.sidebar ul{
+  padding-left: 0rem;
+  font-weight: 500;
+}
+.sidebar-cat{
+  list-style: none;
+  padding: 0.6rem;
+  padding-left: 1.5rem;
+  font-size: 1.1rem;
+}
+.side-link{
+  text-decoration: none;
+}
+/* .sidebar-cat{
+  color: black;
+} */
+.sidebar-cat:hover{
+  background-color: rgb(141, 111, 111);
+  color: aliceblue;
+  border-radius: 5px;
+  box-shadow: 0.3px 0.8px 0.8px ;
+  font-weight: 600;
+  cursor: pointer;
+}
+.activeSidebar{
+  background-color: rgb(237, 166, 144);
+  border-radius: 5px;
+  box-shadow: 0.5px 1px 1px;
+  pointer-events: none;
+  font-weight: 600;
+  margin: 1px 2px 3px 0px;
+}
+.activeSidebarDark{
+  background-color: rgb(142, 60, 60);
+  border-radius: 5px;
+  box-shadow: 0.5px 1px 2px;
+  pointer-events: none;
+  font-weight: 600;
+  margin: 1px 2px 3px 0px;
+}
+.form-switch{
+  font-size: 1rem;
+  font-weight: 600;
+  padding-left:4.2rem;
+  padding-top: 1.5rem;
+}
+.form-switch input{
+  border:1.5px solid black;
+}
+
+/* news.js css */
+#newsdiv h1{
+    margin-top: 4rem;
+}
+
+
+/* .active{
+  background-color: rgb(250, 5, 5);
+  color:aliceblue;
+} */
+
+@media screen and (max-width: 500px){
+  *{
+    font-size: 14px;
+  }
+  .sidebar h3 img {
+    margin-top: 0.2rem;
+    height: 1rem;
+  }
+  .sidebar-cat {
+    padding: 0.4rem;
+    font-size: 1rem;
+  }
+  
+}
