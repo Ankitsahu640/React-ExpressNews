@@ -16,10 +16,10 @@ export default class Navbar extends Component {
                                 <li className="nav-item">
                                     <Link className="nav-link active" aria-current="page" to="/">Home</Link>
                                 </li>
-                                
                             </ul>
-                            <form className="d-flex" role="search">
-                                <input className="form-control me-2" placeholder="Search" aria-label="Search" onChange={this.props.searchNews}/>
+                            <form className="d-flex" role="search" >
+                                <input type="search" className="form-control me-2" id="search" placeholder="Search" aria-label="Search" onKeyDown={this.props.searchNews}/>
+                                {/* <button className="btn btn-outline-light" >Search</button> */}
                             </form>
                         </div>
                     </div>
