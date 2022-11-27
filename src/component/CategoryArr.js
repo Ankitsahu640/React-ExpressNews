@@ -3,7 +3,7 @@ export const CategoryArr = [
   {
     name:"General",
     icon: require(".//img/general.png"),
-    path:"general"
+    path:"breaking-news"
   },
   {
     name:"Business",
