@@ -32,8 +32,12 @@ export default class App extends Component {
   }
 
   searchNews=(e)=>{
-    this.setState({search: e.target.value.trim().toLowerCase()});
+    if(e.key==='Enter'){
+      e.preventDefault();
+      this.setState({search: e.target.value.trim().toLowerCase()});
+    }
   }
+
 
   render() {
     return (
@@ -48,12 +52,14 @@ export default class App extends Component {
                                         </div>
                                       </>
                                     }>
-                <Route path="/" element={<News country="in" pageSize="9" category="general" categoryName="General" mode={this.state.mode} search={this.state.search}/>}  />
-                {CategoryArr.map((element) => {
-                    return(
-                        <Route path={`/${element.path}`} element={<News country="in" key={element.name} pageSize="9" category={element.path} categoryName={element.name} mode={this.state.mode} search={this.state.search}/>} />
-                    )
-                })}
+                <Route path="/" element={<News country="in" pageSize="9" category="breaking-news" categoryName="General" mode={this.state.mode} search={this.state.search}/>}  />
+                {
+                    CategoryArr.map((element) => {
+                        return(
+                            <Route path={`/${element.path}`} element={<News country="in" key={element.name} pageSize="9" category={element.path} categoryName={element.name} mode={this.state.mode} search={this.state.search}/>} />
+                        )
+                    })
+                 }
             </Route>
       </Routes>
       </BrowserRouter>
